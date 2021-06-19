@@ -2,7 +2,7 @@ version: '3.7'
 services: 
    
     audit-authentication-service:
-        image: kavipriyanakkeeran99/audit-authentication-service:0.1
+        image: audit-authentication
         ports: 
             - "8083:8083"
         restart: always
@@ -10,7 +10,7 @@ services:
             - app-network
     
     audit-benchmark-service:
-        image: kavipriyanakkeeran99/audit-benchmark-service:0.1
+        image: audit-benchmark
         ports: 
             - "8082:8082"
         restart: always
@@ -18,7 +18,7 @@ services:
             - app-network
 
     audit-checklist-service:
-        image: kavipriyanakkeeran99/audit-checklist-service:0.1
+        image: audit-checklist-service
         ports: 
             - "8081:8081"
         restart: always
@@ -26,15 +26,15 @@ services:
             - app-network
 
     audit-severity-service:
-        image: kavipriyanakkeeran99/audit-severity-service:0.1
+        image: audit-severity
         ports: 
             - "8080:8080"
         restart: always
         networks:
             - app-network
 
-    audit-webportal-service:
-        image: kavipriyanakkeeran99/audit-webportal-service:0.1
+    audit-web-portal-service:
+        image: audit-web-portal
         ports: 
             - "8090:8090"
         restart: always
